@@ -1,10 +1,9 @@
-In this project, you will control a simulated and a real Turtlebot 3 burger mobile robot in a realistic challenging
-environment, so as to make it navigate from one starting position to a goal position with different tasks to solve on
-the path. The navigation should successively exploit:
-• images obtained from a simulated/real camera to detect and follow some lines,
-• a laser scan obtained from a simulated/real LDS to detected and avoid some obstacles,
-• and finally both of them to navigate in a challenging environment where both sensors are required together.
-The project will take the form of 3 successive challenges relying on the sensorimotor capabilities of the turtlebot, as
-illustrated in the following Figure
-![image](https://github.com/Svadilfvari/Self-Driving-robot-/assets/73406066/7dbb0d1b-34fc-46bd-b881-d495c1c192ec)
-(This is an engoing project)
+In this project, we controlled both a simulated and a real Turtlebot 3 Burger mobile robot within a realistic and challenging environment. The navigation involved several steps:
+
+
+• Utilizing images from a simulated/real camera to detect and follow specific lines. For this task, we implemented a PID (Proportional Integrative Derivative) controller to maintain the robot within the roadway.
+![Alt Text](Self-Driving-robot-/Results/LineFollowingRobot.gif)
+• Employing a laser scan from a simulated/real LDS and the IMU (Inertial Measurement Unit) to detect and avoid obstacles while maintaining a consistent direction.
+![Alt Text](Self-Driving-robot-/Results/ObstacleAvoidanceRobot.gif)
+• Finally, utilizing the laser scan data along with a PID controller to navigate through a tunnel without colliding with its walls.
+![Alt Text](Self-Driving-robot-/Results/TunnelCrossingRobot.gif)
