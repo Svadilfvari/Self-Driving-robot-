@@ -54,20 +54,20 @@ This project implements a robust ROS-based autonomous navigation system for the 
 ## 🧩 ROS Node Architecture
 
 
-+-----------------------+       +---------------------+
-|  ImageProcessingNode  | --->  |   /lanesCentroids   |
-+-----------------------+       +---------------------+
-            |                               |
-            v                               v
-+-----------------------+       +---------------------+
-|  LaserControlStrategy | --->  | /meanDistancesLaser |
-+-----------------------+       +---------------------+
-                                             |
-                                             v
-                                +-------------------------+
-                                |   LineFollowingNode     |
-                                |   (PID / Avoid / Tunnel)|
-                                +-------------------------+
++------------------------+   +------------------------+   +-----------------------------+
+|  ImageProcessingNode   |-->|   /lanesCentroids      |   |                             |
++------------------------+   +------------------------+   |                             |
+             |                                         |   |                             |
+             | v                                       |   |                             |
+             +------------------------+   +------------------------+                     |
+             | LaserControlStrategy   |-->| /meanDistancesLaser    |---------------------+
+             +------------------------+   +------------------------+                     |
+                                                                                         v
+                                                               +-----------------------------+
+                                                               |      LineFollowingNode      |
+                                                               |    (PID / Avoid / Tunnel)    |
+                                                               +-----------------------------+
+
 # 📊 Control Insights & System Tuning
 
 - PID tuning was based on real-time error trends and statistical histograms  
