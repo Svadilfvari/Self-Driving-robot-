@@ -49,24 +49,7 @@ This project implements a robust ROS-based autonomous navigation system for the 
 
 ![Tunnel Crossing](https://github.com/Svadilfvari/Self-Driving-robot-/blob/main/Results/TunnelCrossingRobot.gif)
 
----
 
-## 🧩 ROS Node Architecture
-
-
-+------------------------+   +------------------------+   +-----------------------------+
-|  ImageProcessingNode   |-->|   /lanesCentroids      |   |                             |
-+------------------------+   +------------------------+   |                             |
-             |                                         |   |                             |
-             | v                                       |   |                             |
-             +------------------------+   +------------------------+                     |
-             | LaserControlStrategy   |-->| /meanDistancesLaser    |---------------------+
-             +------------------------+   +------------------------+                     |
-                                                                                         v
-                                                               +-----------------------------+
-                                                               |      LineFollowingNode      |
-                                                               |    (PID / Avoid / Tunnel)    |
-                                                               +-----------------------------+
 
 # 📊 Control Insights & System Tuning
 
